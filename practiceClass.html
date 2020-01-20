@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>practice with practiceClass</title>
+	<script src="practiceClass.js"></script>
+
+</head>
+
+<body>
+
+	<h1>Make an Object from the Practice Class with Inputs</h1>	
+
+	<h2>Example of what will be displayed from input</h2>
+	<p id="misc"></p>
+	
+	<script>
+		var exam = new practiceClass("practice", 0);
+		document.getElementById("misc").innerHTML = exam.present();
+	</script>
+
+
+	<h2>Type in the name and number of the object and press submit.</h2>
+	<form onsubmit="return false;">
+		Name: <input type="text" id="titleIn"> <br>
+		Number: <input type="text" id="numIn"> <br>
+		<input type="submit" value="Submit" onclick="showSummary();">
+	</form>
+		<!-- form is used to make forms for html input -->
+
+	<p id="summary">Display object summary here.</p>
+
+	<script>
+		function showSummary(){
+			var title = document.getElementById('titleIn').value;
+			var num = document.getElementById('numIn').value;
+			var obj = new practiceClass(title, num);
+			document.getElementById("summary").innerHTML = obj.present();
+			document.getElementById("object-processing").style.visibility = "visible";
+			}
+	</script>
+
+	<div id="object-processing" style="visibility:hidden">
+		<h2>These are your options to do to the object:</h2>
+
+		<form onsubmit="return false;">
+		Add this much to the number: <input type="text" id="added">
+		<input type="submit" value="Submit" onclick="updateNum();">
+		</form>
+	</div>
+
+	<script>
+		function updateNum(){
+			var title = document.getElementById('titleIn').value;
+			var num = Number(document.getElementById('numIn').value);
+				//convert to number to do addition
+				//have to re-init the variables because the previous ones were under a fxn and would not register here
+			var obj = new practiceClass(title, num);
+			var added = Number(document.getElementById('added').value);
+			
+			obj.addNum(added);
+			document.getElementById("summary").innerHTML = obj.present();
+			
+			document.getElementById('numIn').value = num + added;
+				// so that the number can be updated multiple times
+			}
+	</script>
+
+
+</body>
+
+</html>
