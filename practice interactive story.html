@@ -1,0 +1,110 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>practice interactive story</title>
+	
+	<style>
+		body {background-color:black;
+			margin:0;}
+
+		#main {background-color:gray; 
+			width:800px; 
+			height:600px;
+			margin:auto;
+			overflow: hidden;}
+		
+		#story {padding:37% 20% 0 20%;
+			text-align:center;
+			color:white;
+			font-size:20px;
+			margin:0;
+			visibility:visible;}
+
+		#choices {padding-top:30%;
+			text-align:center;
+			visibility:hidden;}
+
+		button {background-color:white;
+			color:black;
+			font-size:20px;
+			margin:10px;
+			display:none;}
+
+		
+	</style>
+
+</head>
+
+<body>
+
+<br>
+<div id="main">
+	<!-- ids are unique -->	
+	<div id="story">
+	<p>Press anywhere on the gray screen to start</p>
+	</div>
+<script>
+	
+	var line = 0;
+	var start = ["Hi"];
+	var startChoices = ["leaveHouse", "stayHouse"];
+
+	var leave = ["Bye"];
+	
+	var stay = ["Hi"];
+
+
+	var segment = 0;
+	var branch = [start, leave, stay];
+	var branchChoices = [startChoices];
+
+	
+	document.getElementById("main").onclick = function() {nextLine()};
+	
+	function nextLine() {
+		if (line < branch[segment].length){
+ 			document.getElementById("story").innerHTML = branch[segment][line];
+			line+=1;}
+		else {
+			document.getElementById("story").style.display = "none";
+			document.getElementById("choices").style.visibility = "visible";
+			
+			for (item = 0; item < branchChoices[segment].length; item++){
+				document.getElementById(branchChoices[segment][item]).style.display = "inline";
+				}
+			}
+			
+	}
+
+</script>
+
+	<div id="choices">
+		<button id="leaveHouse" onclick="hideChoices();">Leave the house</button><br>
+		<button id="stayHouse">Stay in the house</button><br>
+
+	</div>
+
+
+	<script>
+
+	
+	function hideChoices() {
+		for (item = 0; item < branchChoices[segment].length; item++){
+			document.getElementById(branchChoices[segment][item]).style.display = "none";
+			}
+		document.getElementById("story").style.display = "inherit";
+		document.getElementById("choices").style.visibility = "hidden";
+	}
+
+	</script>
+
+
+</div>
+
+
+
+
+</body>
+
+</html>
