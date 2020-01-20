@@ -1,0 +1,24 @@
+/* css doesn't have line comments, only block comments 
+** To do a style sheet, you can basically put what you would put
+** into the style tags in the head of an html file in the css file
+*/
+
+body {background-color: green;
+	color: white;}
+
+h1 {color: yellow;}
+
+ul {font-style: italic}
+
+.purple-bg {background-color: purple;}
+	/* .name-of-class as selector instead of body, h1, etc.
+	** to apply to all in the html file set to said class */
+
+img {height: 100px;
+	width: 100px;}
+
+.small {width: 100px;
+	background-color: red;}
+
+.big {width: 300px;
+	background-color: black;}

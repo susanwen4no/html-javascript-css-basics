@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html>
+
+<head>
+	<title>practice with javascript</title>
+
+	<script src="practice with javascript.js"></script>
+		<!-- you can externally link to js files just like css -->
+
+</head>
+
+<body>
+
+	<p id="demo"></p>
+		<!-- id elements and use getElementById() to id it, .innerHTML = whatever you set element to-->
+	<script>
+			<!-- can put script tags into body to tell that it's js-->
+		document.getElementById("demo").innerHTML = randomWord + randomValue + booleanVal;
+			<!-- can refer to variables in js files externally linked-->
+	</script>
+	
+	
+
+	<button id="press" onclick="press()">Press me.</button>
+		<!-- onclick="function()", works with non-buttons too! text, img, etc.-->
+		<!-- in other words: <element onclick="myScript"> -->
+	<script>
+	function press() {
+ 		 document.getElementById("demo").innerHTML = "YOU CLICKED THE BUTTON!";
+	}
+		<!-- create functions with function fxnName(){contents} -->
+	</script>
+
+
+
+	<button id="button2">Click me.</button>
+	<script>
+		document.getElementById("button2").onclick = function() {pressMe()};
+			<!-- can also do onclick via the scripting-->
+			<!--object.onclick = function(){myScript};-->
+	function pressMe() {
+ 		 document.getElementById("demo").innerHTML = "YOU CLICKED BUTTON 2!";
+	}
+	</script>
+
+</body>
+
+</html>

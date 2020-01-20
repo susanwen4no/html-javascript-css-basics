@@ -1,0 +1,72 @@
+<!-- note to self for future: tables do exist in html! how useful -->
+
+<!doctype html>
+
+<html>
+
+<head>
+	<title>practice with css with style sheet</title>
+
+	<link rel="stylesheet" href="practice with css with style sheet.css">
+		<!-- if there's too much styling, it's less clunky to have a separate stylesheet-->
+		<!-- rel so we can tell that it's a style sheet-->
+		<!-- href to refer to the css file-->
+
+</head>
+
+<body>
+
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<p>Paragraph content</p>
+
+	<a href="https://www.w3schools.com/cssref/" style="color:yellow;">css properties guide</a>
+
+	<ul>
+		<li style="text-decoration: line-through;">unordered item 1</li>
+		<li>item 2</li>
+	</ul>
+
+	<p class="purple-bg">Has class set into here. Classes not unique.<br>
+		Name the class what you want. Set it with class="name-of-class"<br>
+		Want multiple classes? have a space between each:
+		class="class1 class2 class3"		
+	</p>
+
+	<img src="image.png">
+
+
+	<p class="small">This is a small paragraph</p>
+	<p class="big">This is a bigger one lalala penguins here's some random text blah blah</p>
+
+	<p style="border:solid;">This one has a box around it</p>
+	<p style="border:solid 20px;">You can add thickness value #px after the border value</p>
+	<p style="border:solid yellow;">You can also add a color value</p>
+	<p style="border:solid; border-radius:10px;">border-radius rounds corners for borders + img</p>
+
+	<img src="image.png" style="border-radius:10px;">
+	<img src="image.png" style="border-radius:50px;">
+
+	<p style="padding:100px; background-color:gray;">padded all around</p>
+	<p style="padding-left:150px;">padded to the left</p>
+	<p style="padding: 200px 50px 70px 60px; border:solid;"> padding top right bottom left, clockwise, whatever you don't want, leave as 0</p>
+
+	<p style="text-align:center;">center the text with text-align</p>
+	<p style="text-align:left;">left</p>
+	<p style="text-align:right;">right</p>
+
+	<p class="small" style="margin:50px;">with margins the border of the thing is actually moved
+		not just the contents of the element. Similar yet different from padding</p>
+
+	<p class="small" style="margin:50px 10px 70px 25px;">top right bottom left clockwise for margins too!</p>
+	<p class="small" style="border-radius: 100px 0 0 0;">top-left clockwise with border radius too!</p>
+
+	<img src="image.png" style="transform: rotate(90deg);">
+		<!-- property is transform. Takes function like rotate() with deg inside. Clockwise-->
+	<button style="transform: rotate(90deg);">transformation works for any element</button>
+
+	
+
+</body>
+
+</html>
