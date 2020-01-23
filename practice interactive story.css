@@ -13,11 +13,11 @@ body {background-color:black;
 	font-size:20px;
 	margin:0;}
 
-#choices {padding-top:30%;
-	text-align:center;}
+#choices {text-align:center;}
+
+.choices {margin-top:37%;}
 
 button {background-color:white;
 	color:black;
 	font-size:20px;
-	margin:10px;
-	display:none;}
+	margin:10px;}

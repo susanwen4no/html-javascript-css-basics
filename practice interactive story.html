@@ -13,20 +13,22 @@
 <body>
 
 <br>
-	
+
 <div id="main">
 	
+	<div id="choices">
+	</div>
+
 	<div id="story">
 	<p id="bleh" class="story">Press anywhere on the gray screen to start</p>
 	</div>	
 
-	<div id="choices"></div>
+
 
 <script>
 	
-
-	document.getElementById("main").onclick = function(){removeElement("bleh"); 
-					addChoice("hello friend");};
+	document.getElementById("main").onclick = function(){removeElement("bleh");
+				addChoice('button','blah');addChoice('button','blah2');};
 
 </script>
 
